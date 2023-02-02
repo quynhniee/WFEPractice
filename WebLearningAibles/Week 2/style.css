@@ -1,0 +1,227 @@
+/* Global */
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    font-size: var(--text-size);
+    box-sizing: border-box;
+    font-family: 'Abel', sans-serif;
+}
+body {
+    color: black;
+    background-color: rgb(242, 242, 242);
+}
+:root {
+    --main-color: #0b5394;
+    --text: #212529BF;
+    --scale: 1;
+    --text-size: calc(20px * var(--scale));
+}
+a {
+    color: black;
+}
+.space {
+    height: 150px;
+}
+section {
+    margin-bottom: 50px;
+}
+.container-png {
+    max-width: 100%;
+    object-fit: cover;
+    max-height: 50em;
+}
+.container-img {
+    width: 100%;
+    max-width: 200%;
+    height: 100%;
+    max-height: 200%;
+    object-fit: cover;
+}
+.container-item {
+    height: 300px;
+    box-sizing: border-box;
+    border: 10px solid white;
+    border-radius: 10px;
+    background-color: rgb(228, 228, 228);
+    overflow: hidden;
+    box-shadow: 0 3px 6px rgba(170, 170, 170, 0.171);
+    position: relative;
+}
+.heading-highlight {
+    text-transform: uppercase;
+    font-weight: 500;
+}
+.text-highlight {
+    color: var(--main-color);
+    font-weight: 500;
+}
+blockquote {
+    max-width: 80%;
+}
+/* End Global */
+
+/* Header */
+header {
+    z-index: 1;
+    background-color: white;
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: block;
+    box-shadow: 0 3px 6px rgba(170, 170, 170, 0.171);
+}
+.main-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;    
+}
+.logo-image {
+    box-sizing: border-box;
+    object-fit: cover;
+    height: calc(50px * var(--scale));
+    margin: 5px 20px 5px 0;
+}
+.nav-bar {
+    text-transform: uppercase;
+}
+.nav-bar>a {
+    font-size: calc(var(--text-size)*0.8);
+    display: inline-block;
+    font-weight: 500;
+    padding: 20px 25px;
+    text-decoration: none;
+}
+.nav-bar>a:hover {
+    background-color: rgba(158, 158, 158, 0.153);
+    color: var(--main-color);
+    font-weight: 800;
+}
+/* End Header */
+
+/* Blogs */
+.slide-left {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+    transition: .5s ease;
+    height: 0;
+}
+.container-item:hover .slide-left {
+    height: 100%;
+}
+.slide-text {
+    position: absolute;
+    top: 50%;
+    color: white;
+    text-transform: uppercase;
+    font-size: calc(var(--text-size)*.7);
+}
+/* End blogs */
+
+/* Contact */
+form {
+    margin: 50px 0px;
+    background-color: white;
+    padding: 20px;
+}
+.form-element {
+    border: 10px solid lightgray;
+    margin-bottom: 15px;
+}
+.btn {
+    background-color: var(--main-color);
+    color: white;
+    border-radius: 5px;
+}
+/* End Contact */
+
+/* Social */
+.social {
+    margin-bottom: 0;
+}
+.footer-content {
+    padding: 30px 0;
+    background-color: white;
+    text-align: center;
+}
+.footer-bottom {
+    color: white;
+    background-color: var(--main-color);
+    text-align: center;
+    padding: calc(var(--text-size)*1.5) 0;
+}
+.footer-icon {
+    display: flex;
+    justify-content: center;
+}
+.footer-icon i {
+    font-size: calc(var(--text-size)*1.5);
+    margin: 0 10px;
+}
+.footer-icon i:hover {
+    color: var(--main-color);
+    transform: scale(0.9);
+}
+/* End Social */
+
+    /* Responsive */
+/* Tablet */
+@media (min-width: 740px) and (max-width: 1023px) {
+    /* Global */
+    :root {
+        --scale: .75;
+    }
+    .space {
+        height: 100px;
+    }
+    /* Header */
+    .nav-bar>a {
+        padding: 10px 15px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 739px) {
+    /* Global */
+    :root {
+        --scale: .5;
+    }
+    section {
+        margin: 0 5%;
+    }
+    .space {
+        height: 75px;
+    }
+    /* Header */
+    .nav-bar>a {
+        padding: 10px 10px;
+    }
+    .hide-img {
+        display: none;
+    }
+}
+@media (max-width: 505px) {
+    /* Header */
+    .logo-image {
+        display: none;
+    }
+    .main-menu {
+        justify-content: center;
+    }
+    .nav-bar>a {
+        padding: 15px 7px;
+    }
+}
+
+
+/* 
+    Smartphone: <740px
+    Tablet: >= 740px and < 1024px
+    PC: >= 1024px 
+*/

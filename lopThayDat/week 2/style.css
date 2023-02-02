@@ -1,0 +1,50 @@
+.bg {
+    width: 100%;
+    height: 100vh;
+    background:     linear-gradient(0, rgba(247, 125, 165, 0.3), rgba(8, 8, 0, 0.3))
+    ,url(https://i.pinimg.com/originals/fe/73/79/fe73794050400ec2bfb4bb1bd504b6af.jpg);
+    background-size: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box {
+    width: 950px;
+    height: 430px;
+    background: rgb(255, 199, 207);
+    border: dashed 5px #333;
+    box-sizing: border-box;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+.pic {
+    border: double 4px palevioletred;
+    
+}
+@font-face {
+    font-family: princess;
+    src: url(/font/PrincessSofia-Regular.ttf);
+}
+.box_child {
+    margin: 20px;
+    width: 500px;
+    height: 300px;
+    font-family: princess;
+    font-size: 20px;
+}
+.box_child a:hover {
+    color: rgb(10, 206, 255);
+}
+.rotateimg45 {
+    -webkit-transform:rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-30deg);
+}
+.pos {
+    position: absolute;
+    top: 0;
+    left: 100px;
+}

@@ -1,0 +1,15 @@
+.box {
+    font-size: 50px;
+    float: left;
+    border: 5px #000 solid;
+    font-style:inherit;
+    padding-inline: 3px;
+}
+.box1 {
+    background-color:black;
+    color: white;
+}
+.box2 {
+    background-color: rgb(209, 115, 0);
+    color: black;
+}

@@ -1,0 +1,64 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+img {
+    object-fit: cover;
+    width: 100%;
+}
+
+nav {
+    .nav-brand img {
+        filter: invert(1);
+    }
+
+    .nav-item.active {
+        border-bottom: 2px solid black;
+    }
+}
+
+.img-logo {
+    width: 15rem;
+}
+
+section {
+    .container {
+        max-width: 900px;
+
+        img.img-fluid {
+            height: 30rem;
+        }
+
+        img {
+            height: 15rem;
+        }
+
+        &>small {
+            max-width: 25rem;
+        }
+
+        .avatar {
+            width: 70px;
+            height: auto;
+        }
+    }
+
+    .eyes {
+        height: auto;
+        width: 5rem;
+    }
+
+    .form-wrapper {
+        width: 100%;
+        max-width: 30rem;
+    }
+}
+
+footer {
+    div:first-child {
+        white-space: nowrap;
+    }
+}

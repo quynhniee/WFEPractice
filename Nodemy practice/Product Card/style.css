@@ -1,0 +1,144 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    height: 100vh;
+    background: linear-gradient(to right, pink, violet);
+    font-family: Arial, Helvetica, sans-serif;
+}
+.card {
+    margin: 120px auto;
+    width: 320px;
+    height: 400px;
+    background-color: rgb(61, 34, 56);
+    border-radius: 20px;
+    padding: 20px;
+    color: whitesmoke;  /* màu của icons bên trong */
+    position: relative;  /* cha */
+}
+.card_heart, .card_cart {  
+    font-size: 25px;
+    position: absolute;   /* con */
+    left: 20px;
+}
+.card_cart {
+    left: unset;  /* do ở trên đã có left nên right không chèn lên được */
+    right: 20px;
+}
+.card_img {
+    width: 90%;
+    transition: 0.5s;  
+}
+.card_img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* để giữ nguyên tỉ lệ oj */
+    object-position: center;
+}
+
+.card_title {
+    font-size: 25px;
+    text-align: center;
+    font-weight: bold;
+    color: pink;
+    margin-bottom: 10px;
+    transition: 0.5s;  
+}
+.card_price {
+    text-align: center;
+    transition: 0.5s;  
+}
+
+.card_color, .card_size {
+    display: flex;
+    align-items: center;  /* căn cho chữ cân giữa với các dòng */
+    margin: 5px;
+}
+.card_size span {
+    cursor: pointer;
+    font-size: 15px;
+    padding: 5px 7px;
+    background-color: rgba(211, 128, 166, 0.658);
+    color: black;
+    border-radius: 5px;
+    width: 50px;
+    margin-left: 5px;
+}
+.card_color span {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    margin: 10px;
+    font-size: 15px;
+    cursor: pointer;
+}
+.card_white {
+    background: whitesmoke;
+}
+.card_black {
+    background: black;
+}
+
+/* button */
+.card_action button {
+    background: pink;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    padding: 10px;
+    font-weight: bold;
+    transition: 0.25s;
+    margin: 10px 30px;
+}
+
+/* hover */
+.card_action button:hover, .card_cart:hover, .card_heart:hover {
+    cursor: pointer;
+    transform: scale(0.9);
+}
+.card_size span:hover {
+    color: whitesmoke;
+    transform: scale(0.9);
+}
+.card:hover .card_img {
+    transform: translateX(-20px) translateY(-130px) rotate(-30deg);
+}
+.card:hover .card_title {
+    transform: translate(0px, -130px);
+}
+.card:hover .card_price {
+    transform: translate(-75px, -130px);
+}
+
+/* data */
+.card_size {
+    margin-top: 150px;
+}
+.card:hover .card_size {
+    margin-top: -90px;
+}
+.card_action, .card_color, .card_size {
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s;
+    transition-delay: 0.1s;
+}
+.card:hover .card_action,
+.card:hover .card_color,
+.card:hover .card_size {
+    visibility: visible;
+    opacity: 100;
+}
+/* 
+.card_data {
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s;
+    transition-delay: 0.3s;  
+}
+.card:hover .card_data {
+    visibility: visible;
+    opacity: 100;
+} */

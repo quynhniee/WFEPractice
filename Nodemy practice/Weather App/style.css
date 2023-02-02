@@ -1,0 +1,108 @@
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+body.hot {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 1)),
+        url(hot.png) no-repeat center/cover;
+}
+
+body.hot #weather {
+    background-image: url(hot.png);
+}
+
+body.cold {
+    background: linear-gradient(rgba(0, 0, 0, 0.188), rgba(0, 0, 0, 0.774)),
+        url(cold.png) no-repeat center/cover;
+}
+
+body.cold #weather {
+    background-image: url(cold.png);
+}
+
+#weather {
+    min-width: 350px;
+    height: 600px;
+    background: no-repeat center/cover;
+    text-align: center;
+    padding: 30px 20px;
+    border-radius: 10px;
+    transition: 0.4s;
+}
+
+input {
+    border: none;
+    outline: none;
+    padding: 10px 20px;
+    background-color: rgba(255, 255, 255, 0.4);
+    font-size: 19px;
+    box-shadow: 0 5px 4px rgba(0, 0, 0, 0.2);
+    margin-bottom: 40px;
+    width: 100%;
+    transition: 0.4s;
+    border-radius: 0 15px;
+}
+
+input:focus {
+    border-radius: 15px 0;
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+.content {
+    color: white;
+}
+
+#weather>.content>.name {
+    font-size: 35px;
+    text-shadow: 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+#weather>.content>.time {
+    font-size: 15px;
+    margin: 6px 0;
+}
+
+#weather>.content>.temperature {
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 15px;
+    box-shadow: #0000005a 2px 2px 0 2px;
+    font-size: 65px;
+    font-weight: 800;
+    margin: 20px 0 30px;
+    padding: 20px;
+    text-align: center;
+    text-shadow: #0000006a 4px 4px 0;
+    display: inline-block;
+}
+
+#weather>.content>.short-desc {
+    font-size: 40px;
+    font-weight: 600;
+    text-shadow: #0000006a 3px 3px 0px;
+}
+
+#weather>.content>.more-desc {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+
+#weather>.content>.more-desc>div {
+    display: flex;
+    flex-direction: column;
+}
+
+#weather>.content>.more-desc>div>span {
+    margin-top: 15px;
+}

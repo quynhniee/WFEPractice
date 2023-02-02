@@ -1,0 +1,12 @@
+@mixin tablet {
+    @media (min-width: 768px) {
+        @content;
+    }
+}
+
+@mixin media-md ($before, $after, $property: width) {
+    #{$property}: $before;
+    @include tablet() {
+        #{$property}: $after;
+    }
+}

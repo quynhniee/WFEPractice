@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo list</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+
+</head>
+
+<body>
+    <div class="wrapper mx-auto my-5">
+        <div id="help" class="d-flex">
+            <span class="material-icons">help</span>
+            <span class="ms-4">
+                Click '<span class="material-icons">close</span>' to remove item <br>
+                Click '<span class="material-icons">done</span>' to mark it as complete <br>
+                Click '<span class="material-icons">edit</span>' to edit content <br>
+                *Please use &lt;br&gt; instead of Enter to go to next line
+            </span>
+        </div>
+        <form class="input-group my-3">
+            <input type="text" class="form-control" placeholder="Type something">
+            <button class="btn btn-secondary" type="submit">
+                <span class="material-icons display-3">add</span>
+            </button>
+        </form>
+        <ul class="list-group" id="list-group">
+            <li class="list-group-item d-flex justify-content-between">
+                <div class="list-item-content d-flex">
+                    <span class="px-2">1 <br> 2 <br> 3</span>
+                    <button class="btn btn-sm btn-outline-success" onclick="toggleEdited(this.previousElementSibling)">Done</button>
+                </div>
+                <div class="text-secondary">
+                    <span class="material-icons" onclick="completed(this)">done</span>
+                    <span class="material-icons" onclick="edited(this)">edit</span>
+                    <span class="material-icons" onclick="deleted(this)">close</span>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>

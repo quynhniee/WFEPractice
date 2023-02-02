@@ -1,0 +1,37 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.wrapper {
+    width: 500px;
+    padding: 2rem;
+}
+#help>span:last-child {
+    display: none;
+}
+#help:hover>span:last-child {
+    display: block;
+}
+ul li .text-secondary>span {
+    opacity: 0;
+    transition: 0.1s linear;
+}
+ul li:hover .text-secondary>span {
+    opacity: .5;
+    cursor: pointer;
+}
+ul li .text-secondary>span:hover {
+    transform: scale(1.1);
+    opacity: 1;
+}
+.list-item-content button {
+    display: none;
+}
+.list-item-content.edited button {
+    display: block;
+}
+.list-item-content>span {
+    min-width: 100px;
+    word-break: break-all;
+}
