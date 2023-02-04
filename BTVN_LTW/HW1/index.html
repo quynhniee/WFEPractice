@@ -99,9 +99,10 @@
         }
 
         function getValue() {
-            if (isNaN(a) || isNaN(b))
+            if (isNaN(a) || isNaN(b)) {
+                result.value = null;
                 alert('Error! Please enter numeric value.');
-            else result.value = +a + +b;
+            } else result.value = +a + +b;
         }
     </script>
 </body>
