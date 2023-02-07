@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <select id="par" title="w">
+        <option value="3">Par 3</option>
+        <option value="4">Par 4</option>
+        <option value="5">Par 5</option>
+    </select>
+    <label for="score">So gay:</label>
+    <input type="number" id="score">
+    <button onclick="submitHandler()">Submit</button>
+    <script>
+        const input = document.getElementById('score');
+        const par = +document.getElementById('par').value;
+
+        function submitHandler() {
+            const value = +input.value;
+            if (isNaN(value) || value <= 0) alert('so gay khong hop le');
+            if (value === 1) alert('Hole-in-one');
+            if (value <= par - 2) alert('Eagle');
+            if (value <= par - 1) alert('Birdy');
+            if (value == par) alert('Par');
+            if (value === par + 1) alert('Bogey');
+            if (value === par + 1) alert('Double Bogey');
+            if (value === par + 3) alert("Thua roi ban ey")
+        }
+    </script>
+</body>
+
+</html>
